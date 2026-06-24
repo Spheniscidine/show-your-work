@@ -21,6 +21,25 @@ honestly.
 
 ---
 
+## Yeah, this is uncomfortable
+
+Filling this out is hard, and a little self-incriminating. You end up writing down
+what you didn't secure, what you don't fully understand, and what you haven't
+tested. Nobody is making you publish any of it, and plenty of people won't want
+to. That's a fair reaction.
+
+But the discomfort is kind of the point. Anyone can stay quiet; saying "here is
+what I haven't done yet" is the part that actually earns trust, because it can't
+be faked. If you care about building in the open and being straight with the
+people who rely on your work, an honest disclosure is one of the few ways to prove
+that instead of just claiming it.
+
+And if you're not ready to share all of it, that's okay. Fill in what you can,
+keep the rest private for now, and come back as the project grows. Partial honesty
+still beats polished silence.
+
+---
+
 ## Why this exists
 
 There's a wave of AI-assisted tools shipping right now, and a recurring,
