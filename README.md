@@ -1,6 +1,6 @@
 # Show Your Work
 
-A self-assessment skill for people shipping vibe-coded apps — ordinary apps (a
+A self-assessment skill for people shipping vibe-coded apps - ordinary apps (a
 tracker, a PM tool, a CRM) built largely with AI, by builders who may not come
 from a traditional dev background. 
 
@@ -30,7 +30,7 @@ reasonable question from the people asked to use them:
 2. **Is my data safe?** What's collected, where does it go, who can see it?
 3. **Does the person behind it understand what they shipped?**
 
-Most builders answer these badly or not at all — not out of malice, but because
+Most builders answer these badly or not at all - not out of malice, but because
 nobody handed them the questions. This hands them the questions, helps them
 answer honestly (including "I don't know yet"), and formats the result so a
 stranger can read it in 30 seconds.
@@ -43,32 +43,33 @@ security review, here's my email" builds *more* trust than silence or a vague
 
 ## What it produces
 
-- **`AI-DILIGENCE.md`** — the headline deliverable: a standardized, skimmable
+- **`AI-DILIGENCE.md`** - the headline deliverable: a standardized, skimmable
   **AI Diligence Statement** you publish on your repo or app.
-- **Short forms to embed it** — a badge, a footer/README blurb, and a forum/launch
+- **Short forms to embed it** - a badge, a footer/README blurb, and a forum/launch
   one-liner that all point back to the full statement.
-- **A "Transparency Completeness" score** — e.g. *8 / 8 sections disclosed*.
-  This scores *whether you answered*, not *whether the answer is good*. "No
-  privacy policy, and here's why" counts as a complete disclosure.
-- **A "disclose or fix" punch list** — light hygiene signals found in your repo
+- **A disclosure-completeness score** - e.g. *8 of 8 sections answered*. It scores
+  *whether you answered*, not *whether the answer is good*, and it always travels
+  with that definition so a bare "8/8" can't be waved around as a quality grade.
+  "No privacy policy, and here's why" counts as a complete disclosure.
+- **A "disclose or fix" punch list** - light hygiene signals found in your repo
   (a committed `.env`, no `LICENSE`, hardcoded-looking keys), framed as things
   to either fix or be upfront about. Never a pass/fail grade.
-- **A common-vibe-coding-pitfalls pass** — the high-signal one. It looks for the
+- **A common-vibe-coding-pitfalls pass** - the high-signal one. It looks for the
   *characteristic* ways AI-generated apps break: a wide-open database, a secret
   key shipped to the browser, security that only exists in the frontend, the
   server trusting IDs from the client, placeholder code shipped as real.
-- **Prioritized "Recommended next steps"** — the part that actually *guides* you.
+- **Prioritized "Recommended next steps"** - the part that actually *guides* you.
   It scans your project against a library of well-established best practices
   (per-user data isolation, committed lockfiles, a privacy policy, export/delete,
   disclosing your third parties, …) and hands you a
-  `NOW` / `SOON` / `LATER` list with the concrete action for each — leading with
+  `NOW` / `SOON` / `LATER` list with the concrete action for each - leading with
   the one step that most reduces your risk.
 
 ---
 
 ## Install (Claude Code)
 
-The `skill/show-your-work/` directory is self-contained — the rubric,
+The `skill/show-your-work/` directory is self-contained - the rubric,
 best-practices, pitfalls, and templates all live inside it, so copying that one
 folder is the whole install:
 
@@ -112,7 +113,7 @@ directory:
 | `skill/show-your-work/SKILL.md` | The Claude Code skill that drives the interview and scan. |
 | `skill/show-your-work/RUBRIC.md` | The portable core: the 8 disclosure sections + the hygiene signals. Tool-agnostic. |
 | `skill/show-your-work/BEST-PRACTICES.md` | The guidance engine: scannable best practices → prioritized next steps. |
-| `skill/show-your-work/PITFALLS.md` | Common vibe-coding pitfalls — the characteristic AI-generated-app failures, scannable. |
+| `skill/show-your-work/PITFALLS.md` | Common vibe-coding pitfalls - the characteristic AI-generated-app failures, scannable. |
 | `skill/show-your-work/templates/AI-DILIGENCE-STATEMENT.md` | The blank AI Diligence Statement to fill in (publish as `AI-DILIGENCE.md`). |
 | `skill/show-your-work/templates/SHORT-FORMS.md` | The badge, embeddable blurb, and forum one-liner that point to it. |
 | `skill/show-your-work/examples/EXAMPLE-AI-DILIGENCE.md` | A filled-in example for a fictional vibe-coded app. |
@@ -127,10 +128,10 @@ directory:
 - **Hygiene findings are signals, not verdicts.** "We found a committed `.env`"
   is a thing to fix or disclose, not a failing grade.
 - **It guides, it doesn't bless.** The next-steps engine recommends concrete
-  improvements, but doing them earns a better disclosure — never a "secure" stamp.
+  improvements, but doing them earns a better disclosure - never a "secure" stamp.
 - **The author is an interested party.** This tool was built by someone who also
   ships an AI-assisted tool. It deliberately can't hand anyone (including its
-  author) a "trusted" badge — only a "here's what they told you" one.
+  author) a "trusted" badge - only a "here's what they told you" one.
 
 ---
 

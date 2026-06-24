@@ -6,12 +6,16 @@
   app as safe. Read it and judge for yourself.
 -->
 
-# AI Diligence Statement — <Tool Name>
+# AI Diligence Statement - <Tool Name>
 
 > **What this is:** an honest account of how this app was built (largely with AI)
-> and how it's operated — written so you can decide whether to trust it. It is
-> **not** a guarantee of security or safety. **Transparency Completeness: _N_ / 8
-> sections.**
+> and how it's operated - written so you can decide whether to trust it. It is
+> **not** a guarantee of security or safety.
+>
+> **Disclosure completeness: _N_ of 8 sections answered.** This counts how much
+> the builder disclosed - *not* whether the app is good, safe, secure, or
+> trustworthy. "8 / 8" means every question was answered honestly, **not** that
+> the app passed anything. Please don't read the number as a grade.
 
 _Last updated: YYYY-MM-DD_
 
@@ -21,6 +25,9 @@ _Last updated: YYYY-MM-DD_
   myself; the database setup and some deps are beyond me right now.">
 - **My relevant background, honestly:** <e.g. "professional dev, new to this
   stack" / "I can script but I'm not a web dev" / "first project, learning">
+- **Did I review the AI's code?** <never - I trusted it / targeted - I read the
+  important or risky parts / line-by-line - I read all of it> (This is the thing
+  readers most want to know, so be specific.)
 - **If it broke and users were affected:** <your realistic plan to get help / fix it>
 
 ## 2. Who's behind it
@@ -46,22 +53,30 @@ _Last updated: YYYY-MM-DD_
 
 ## 5. Data: your control
 - **Export your data:** <yes / no / planned>
-- **Delete account & data:** <yes / no — and whether delete really deletes>
+- **Delete account & data:** <yes / no - and whether delete really deletes>
 - **Privacy policy:** <link, or "none yet">
 - **Terms of service:** <link, or "none yet">
 
-## 6. Security posture (what's been done — and not)
+## 6. Security posture (what's been done - and not)
 - **Auth:** <provider used, or "rolled my own">
 - **Per-user data isolation:** <e.g. row-level security, or "not formally enforced">
 - **HTTPS only:** <yes / no>
 - **Secrets handling:** <env vars / secret manager / honest "they were in the repo, now fixed">
 - **Security review:** <by me / by a tool / by a person / none yet>
+- **Automated self-check:** <e.g. "Ran the Show Your Work scan: it looked for a
+  handful of common vibe-coding holes - open database rules, secrets in the
+  client, frontend-only auth, the server trusting client-supplied IDs, committed
+  secrets - and flagged none." / "...and flagged: <X>, which I've since fixed.">
+
+> _About that self-check: it looked only for a few specific, common mistakes.
+> **Finding none does not mean the app is secure.** It is a best-effort automated
+> read of the code, not a security review, and it is not exhaustive._
 
 _This section describes what exists. It is not a claim that the app is secure._
 
 ## 7. Source & cost
 - **Source:** <open (license) / closed>
-- **Cost:** <free / paid / freemium — and any surprise or usage-based costs>
+- **Cost:** <free / paid / freemium - and any surprise or usage-based costs>
 
 ## 8. Known limitations & what's next
 - **Known weak / unfinished / untested areas:** <be specific and honest>
@@ -69,8 +84,9 @@ _This section describes what exists. It is not a claim that the app is secure._
 
 ---
 
-<sub>This AI Diligence Statement measures completeness of disclosure, not
-trustworthiness. A shallow static scan was used to surface hygiene signals and
-common vibe-coding pitfalls; it cannot evaluate runtime security, auth
-correctness, or access-control logic. Absence of flagged issues is not a clean
-bill of health.</sub>
+<sub>This statement measures completeness of disclosure, not trustworthiness. Any
+automated scan referenced here is a best-effort read of the code by an AI tool: it
+is non-exhaustive, can miss real problems, varies from run to run, and is
+illustrative - not an audit. It cannot evaluate runtime security, auth
+correctness, or access-control logic. <strong>Absence of flagged issues is not a
+clean bill of health.</strong></sub>

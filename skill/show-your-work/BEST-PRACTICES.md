@@ -12,11 +12,11 @@ Each practice below is written so an agent running *inside the project* can:
 4. Tag a **priority**: `NOW` (do before sharing this with anyone), `SOON`
    (within the next iteration), `LATER` (matters as it grows).
 
-> **Guardrail — read this every time.** These are widely-accepted hygiene
+> **Guardrail - read this every time.** These are widely-accepted hygiene
 > practices, not a security audit, and not a checklist that ends in "certified."
 > Doing them genuinely improves your posture *and* gives you honest things to put
 > in your disclosure. It never makes the tool "safe," and the agent must never
-> claim it does. Recommend; don't bless. Detection is shallow and best-effort —
+> claim it does. Recommend; don't bless. Detection is shallow and best-effort -
 > a missing signal can be a false negative (you did it a way the scan didn't see),
 > so phrase findings as "I didn't detect X" not "you don't have X."
 
@@ -34,7 +34,7 @@ present; never install anything.
 - Good: nothing tracked or hardcoded. Missing: a tracked `.env` or a real key in source.
 - Next step: untrack it (`git rm --cached`), **rotate the exposed key immediately**,
   add to `.gitignore`, move to the host's secret store.
-- Priority: **NOW** if a real secret is committed — this is the one true emergency.
+- Priority: **NOW** if a real secret is committed - this is the one true emergency.
 
 **A2. `.gitignore` covers env files.**
 - Detect: `.gitignore` exists and contains a `.env` pattern.
@@ -87,11 +87,11 @@ present; never install anything.
 - Priority: SOON.
 
 **C3. Third-party data flows are disclosed.**
-- Detect: enumerate external services the app's data touches — auth, DB/hosting,
-  analytics, email, payments — from dependencies and config
+- Detect: enumerate external services the app's data touches - auth, DB/hosting,
+  analytics, email, payments - from dependencies and config
   (`rg -n -e 'supabase' -e 'firebase' -e 'planetscale' -e 'neon' -e 'stripe' -e 'plausible' -e 'posthog' -e 'segment' -e 'sendgrid' -e 'resend' -e 'mailgun'`).
-  *(If the app happens to have an AI feature, the model provider — `openai`,
-  `@anthropic`, `ai-sdk`, etc. — is just one more entry on this list, not a
+  *(If the app happens to have an AI feature, the model provider - `openai`,
+  `@anthropic`, `ai-sdk`, etc. - is just one more entry on this list, not a
   special case.)*
 - Good: §4 of the disclosure names the services data actually flows through.
 - Next step: list every third party that sees user data, so the reader isn't
@@ -122,7 +122,7 @@ present; never install anything.
 **E1. Inputs validated at trust boundaries.**
 - Detect: `rg -n -e 'zod' -e 'yup' -e 'valibot' -e 'pydantic' -e 'joi'` and check
   that forms / API handlers validate what users submit before storing it.
-- Next step: validate and type user input at every save/submit path — protects
+- Next step: validate and type user input at every save/submit path - protects
   both your data and your users.
 - Priority: SOON.
 
@@ -136,7 +136,7 @@ present; never install anything.
 - Detect: test files (`*.test.*`, `*_test.py`, `tests/`), a test script in the
   manifest, and CI config (`.github/workflows`, `.gitlab-ci.yml`).
 - Next step: add one smoke test of the critical path + a CI job that runs it on push.
-- Priority: LATER (but a strong durability signal — call it out).
+- Priority: LATER (but a strong durability signal - call it out).
 
 **F2. Error tracking / monitoring.**
 - Detect: `rg -n -e 'sentry' -e 'datadog' -e 'logtail' -e 'highlight.run' -e 'posthog'`
@@ -144,7 +144,7 @@ present; never install anything.
 - Priority: LATER.
 
 **F3. Backups exist and have been tested.**
-- Detect: not reliably scannable — ask. Managed DBs (Supabase/Neon/etc.) often
+- Detect: not reliably scannable - ask. Managed DBs (Supabase/Neon/etc.) often
   have automatic backups.
 - Next step: confirm backups are on and that you've actually restored once.
 - Priority: LATER.
@@ -172,7 +172,7 @@ present; never install anything.
 
 ## H. Builder capability (disclosure, not scan)
 
-Not scannable — but the agent can surface a **compound-risk note** when several
+Not scannable - but the agent can surface a **compound-risk note** when several
 signals stack up, gently and without shaming:
 
 - If §1 says *fully AI-built* **and** the builder says they couldn't debug it solo
@@ -193,19 +193,25 @@ Sort all detected next steps by priority, then by trust impact:
 Recommended next steps
 
 NOW
-  - [B2] Firestore rules allow read/write if true — anyone can read every user's
+  - [B2] Firestore rules allow read/write if true - anyone can read every user's
     data. Replace with per-user rules before sharing this. (#1 priority)
-  - [A1] A live-looking API key is committed in src/config.ts — rotate it now and
+  - [A1] A live-looking API key is committed in src/config.ts - rotate it now and
     move it to an env var.
 
 SOON
-  - [C3] Data flows to Supabase and Stripe but §4 lists neither — name the third
+  - [C3] Data flows to Supabase and Stripe but §4 lists neither - name the third
     parties so users aren't surprised.
-  - [D1] No lockfile committed — run `npm install` and commit package-lock.json.
+  - [D1] No lockfile committed - run `npm install` and commit package-lock.json.
 
 LATER
-  - [F1] No tests found — a single smoke test + CI would make this read as durable.
+  - [F1] No tests found - a single smoke test + CI would make this read as durable.
 ```
 
 Always close with the guardrail line: *these steps improve posture and give you
-more to disclose honestly; they don't certify the tool as safe.*
+more to disclose honestly; they don't certify the app as safe.*
+
+And label the scan honestly, right under the list - this is a **best-effort read
+of the code by an AI tool**: it is non-exhaustive, misses things, and can return
+different results on different runs. It's **illustrative, not an audit.** If the
+list is short or empty, say so explicitly: *"I only checked the practices listed
+here; a short list is not a clean bill of health."*
