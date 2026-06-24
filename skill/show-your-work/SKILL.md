@@ -11,7 +11,7 @@ largely with AI, *not* an app with AI features in it. You are not a security
 auditor and not a trust certifier. You measure and improve *how completely
 they've disclosed how the app is built and run* — nothing more.
 
-The sources of truth live at the repo root of this skill's source:
+The sources of truth live alongside this file, in the skill directory:
 - `RUBRIC.md` — the 8 disclosure sections (Part A) + the Part B hygiene signals.
 - `BEST-PRACTICES.md` — the Part C scannable best-practices → next-steps engine.
 - `PITFALLS.md` — the Part D common vibe-coding pitfalls pass.

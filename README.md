@@ -68,15 +68,18 @@ security review, here's my email" builds *more* trust than silence or a vague
 
 ## Install (Claude Code)
 
-Copy the skill into your project or your home skills directory:
+The `skill/show-your-work/` directory is self-contained — the rubric,
+best-practices, pitfalls, and templates all live inside it, so copying that one
+folder is the whole install:
 
 ```bash
-# project-local
-mkdir -p .claude/skills
-cp -r skill/show-your-work .claude/skills/
+git clone https://github.com/Spheniscidine/show-your-work.git
 
-# or available everywhere
-cp -r skill/show-your-work ~/.claude/skills/
+# available everywhere
+cp -r show-your-work/skill/show-your-work ~/.claude/skills/
+
+# …or just this project
+mkdir -p .claude/skills && cp -r show-your-work/skill/show-your-work .claude/skills/
 ```
 
 Then run it:
@@ -88,7 +91,7 @@ Then run it:
 ## Use with any other AI tool (Cursor, Windsurf, Copilot, etc.)
 
 The skill is just a wrapper around plain-markdown files. Point your agent at
-[`RUBRIC.md`](RUBRIC.md) and tell it:
+[`skill/show-your-work/RUBRIC.md`](skill/show-your-work/RUBRIC.md) and tell it:
 
 > Walk me through RUBRIC.md section by section, scan my repo for the hygiene
 > signals, best practices (BEST-PRACTICES.md), and pitfalls (PITFALLS.md) it
@@ -101,15 +104,18 @@ No Claude Code required.
 
 ## What's in here
 
+Everything the skill needs lives in the self-contained `skill/show-your-work/`
+directory:
+
 | File | What it is |
 |------|------------|
-| `RUBRIC.md` | The portable core: the 8 disclosure sections + the hygiene signals. Tool-agnostic. |
-| `BEST-PRACTICES.md` | The guidance engine: scannable best practices → prioritized next steps. |
-| `PITFALLS.md` | Common vibe-coding pitfalls — the characteristic AI-generated-app failures, scannable. |
-| `templates/AI-DILIGENCE-STATEMENT.md` | The blank AI Diligence Statement to fill in (publish as `AI-DILIGENCE.md`). |
-| `templates/SHORT-FORMS.md` | The badge, embeddable blurb, and forum one-liner that point to it. |
 | `skill/show-your-work/SKILL.md` | The Claude Code skill that drives the interview and scan. |
-| `examples/EXAMPLE-AI-DILIGENCE.md` | A filled-in example for a fictional vibe-coded app. |
+| `skill/show-your-work/RUBRIC.md` | The portable core: the 8 disclosure sections + the hygiene signals. Tool-agnostic. |
+| `skill/show-your-work/BEST-PRACTICES.md` | The guidance engine: scannable best practices → prioritized next steps. |
+| `skill/show-your-work/PITFALLS.md` | Common vibe-coding pitfalls — the characteristic AI-generated-app failures, scannable. |
+| `skill/show-your-work/templates/AI-DILIGENCE-STATEMENT.md` | The blank AI Diligence Statement to fill in (publish as `AI-DILIGENCE.md`). |
+| `skill/show-your-work/templates/SHORT-FORMS.md` | The badge, embeddable blurb, and forum one-liner that point to it. |
+| `skill/show-your-work/examples/EXAMPLE-AI-DILIGENCE.md` | A filled-in example for a fictional vibe-coded app. |
 
 ---
 
