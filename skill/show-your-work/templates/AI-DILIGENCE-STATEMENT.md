@@ -19,6 +19,19 @@
 
 _Last updated: YYYY-MM-DD_
 
+## My AI commitments: the lines I won't cross (optional)
+
+My hard policies on how AI is and isn't used here, stated up front. These are
+promises about AI, not facts anyone verified, but a broken promise is on me. List
+only what you actually intend to keep, and skip this section if you have none yet.
+(It isn't counted in the completeness score below; it's a bonus, not a requirement.)
+
+- <e.g. "I will never use your data to train AI models.">
+- <e.g. "I will never send your data to a third-party AI service.">
+- <e.g. "No AI-generated art or content in this product.">
+- <e.g. "Any AI feature is opt-in and clearly labeled, never on by default.">
+- <e.g. "AI never makes account or moderation decisions about you without a human in the loop.">
+
 ## 1. AI involvement & builder capability
 - **How much AI assistance:** <a little / a lot / almost entirely>
 - **Could I debug / maintain this solo?** <e.g. "I can patch the core flows

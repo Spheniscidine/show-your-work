@@ -105,6 +105,16 @@ solo, what's your honest background, your 2am plan). Assess *honest, specific
 disclosure*, never raw skill; never make a beginner feel unqualified for being
 upfront.
 
+Also ask about **AI commitments** (the optional, unscored block at the top of the
+statement): are there AI lines they're choosing to hold? Keep these specifically
+about AI usage and prompt with concrete examples so the idea lands: "I will never
+use your data to train AI models," "I will never send your data to a third-party
+AI service," "no AI-generated art or content," "any AI feature is opt-in and
+labeled," "no automated AI decisions about you without a human in the loop." Make
+clear it's optional and not part of the score, that general promises ("I won't sell
+your data") belong in a privacy policy rather than here, only list promises they
+actually intend to keep, and skip it cleanly if they have none.
+
 Capture answers verbatim-in-spirit. When an answer is vague, gently ask for the
 specific ("'secure' - do you mean auth is handled by a provider, or that you
 reviewed it yourself?"). Accept and record honest "no/don't know" answers.

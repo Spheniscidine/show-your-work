@@ -18,6 +18,17 @@
 
 _Last updated: 2026-06-24_
 
+## My AI commitments: the lines I won't cross
+
+My hard policies on how AI is and isn't used here, stated up front. These are
+promises about AI, not facts anyone verified, but a broken promise is on me.
+
+- I will never feed your projects, tasks, or any account data into an AI model, or
+  use it to train one.
+- I won't add AI features without telling you first; if any ever ship, they'll be
+  opt-in and clearly labeled.
+- No AI-generated content is passed off as human-written anywhere in TeamTrack.
+
 ## 1. AI involvement & builder capability
 - **How much AI assistance:** Almost entirely. I described the features and an AI
   agent wrote nearly all of the code.

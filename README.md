@@ -64,6 +64,10 @@ security review, here's my email" builds *more* trust than silence or a vague
 
 - **`AI-DILIGENCE.md`** - the headline deliverable: a standardized, skimmable
   **AI Diligence Statement** you publish on your repo or app.
+- **An AI-commitments block** (optional) - your hard lines on AI usage, stated up
+  front ("I'll never train AI on your data," "no AI-generated art," "AI features
+  are opt-in and labeled"). Self-declared promises about AI, leading the statement
+  as a positive opener.
 - **Short forms to embed it** - a badge, a footer/README blurb, and a forum/launch
   one-liner that all point back to the full statement.
 - **A disclosure-completeness score** - e.g. *8 of 8 sections answered*. It scores

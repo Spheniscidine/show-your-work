@@ -28,6 +28,20 @@ It measures how much you've disclosed. It does **not** measure whether your app
 is good, safe, or trustworthy. Make that distinction loudly in any output, and
 never let the bare number travel without it (see the Output contract).
 
+**Optional, unscored: "AI commitments" (the AI lines the builder won't cross).** A
+short list of forward-looking promises specifically about **AI usage** the builder
+chooses to hold, for example "I will never use your data to train AI models," "I
+will never send your data to a third-party AI service," "no AI-generated art or
+content," "any AI feature is opt-in and labeled," "no automated AI decisions about
+a user without a human in the loop." Keep them AI-specific (general promises like
+"I won't sell your data" belong in a privacy policy, not here). They differ from
+the 8 sections: the sections look backward at what was built and run, while these
+look forward at what the builder promises about AI. They are self-declared
+promises, not verified facts (a broken one is on the builder), they sit at the TOP
+of the statement as a positive opener, they are entirely optional, and they do
+**not** count toward the N-of-8 score. Don't invent them or pressure for them;
+surface the idea with examples and let the builder add real ones or skip.
+
 ### 1. AI involvement & builder capability
 *The thing the whole genre is dodging. Lead with it. This is a top trust signal:
 the reader wants to know both how the code was made AND whether the person can
