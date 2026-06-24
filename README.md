@@ -2,8 +2,7 @@
 
 A self-assessment skill for people shipping vibe-coded apps — ordinary apps (a
 tracker, a PM tool, a CRM) built largely with AI, by builders who may not come
-from a traditional dev background. (Not for apps that *have AI features* in them
-— that's a narrow subset; this is about how the app was *built*.)
+from a traditional dev background. 
 
 It interviews you, takes a light look at your repo, and produces a clean,
 publishable **AI Diligence Statement** (`AI-DILIGENCE.md`) you can paste into your
