@@ -1,5 +1,29 @@
-# Show Your Work is just markdown — keep the repo clean of local cruft.
-.DS_Store
+# Show Your Work is just markdown — keep the repo clean and safe for a public repo.
+
+# Secrets / environment
 .env
 .env.*
+*.pem
+*.key
+
+# Claude Code local settings (machine-specific; share settings.json deliberately if ever needed)
+.claude/settings.local.json
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+
+# Dependencies & build output (in case tooling is ever added)
 node_modules/
+dist/
+build/
+
+# Logs & temp
+*.log
+.tmp/
+tmp/
