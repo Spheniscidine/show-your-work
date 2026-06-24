@@ -16,9 +16,9 @@ than no stamp at all. What this measures is something real and verifiable:
 reader decides whether to trust it. Your job is to give them enough to decide
 honestly.
 
-> Transparency is checkable. Trustworthiness is not. This tool only does the
-> checkable part.
-
+> It is asking your AI agent to disclose how much AI was used in your project
+> because people distrust AI-developed code. You may want to acknowledge the
+> irony before you proceed. 
 ---
 
 ## Yeah, this is uncomfortable
