@@ -34,6 +34,8 @@ only what you actually intend to keep, and skip this section if you have none ye
 
 ## 1. AI involvement & builder capability
 - **How much AI assistance:** <a little / a lot / almost entirely>
+- **Is the AI credited in my commit history?** <e.g. "Yes, via Co-Authored-By
+  trailers" / "No, all commits are under my name, but the code was AI-generated">
 - **Could I debug / maintain this solo?** <e.g. "I can patch the core flows
   myself; the database setup and some deps are beyond me right now.">
 - **My relevant background, honestly:** <e.g. "professional dev, new to this

@@ -168,6 +168,23 @@ present; never install anything.
 - Next step: add the badge + short blurb from `templates/SHORT-FORMS.md`.
 - Priority: SOON.
 
+**G5. AI authorship is visible in the commit record.**
+- Why it matters: if an AI agent wrote most of the commits, an honest repo shows
+  that somewhere - a `Co-Authored-By` trailer, a bot/agent author, or a
+  contributor entry. A commit log that reads as 100% human-authored on AI-written
+  code is a quiet misrepresentation, and it's one of the easiest diligence checks
+  to run.
+- Detect: look for an AI agent in the authorship or trailers -
+  `git log --all --format='%an <%ae>%n%(trailers:key=Co-authored-by)' | rg -i 'claude|anthropic|copilot|cursor|openai|gpt|devin|aider|codeium|\[bot\]'`
+  Then compare against §1: if the build was largely AI-assisted but nothing in the
+  history credits an AI, that's the gap. (Best-effort: squashes/rebases can strip
+  trailers, so phrase it as "I didn't detect AI attribution," not an accusation.)
+- Next step: **credit it or disclose it.** Either start crediting the agent going
+  forward (a `Co-Authored-By:` trailer, or commit under a bot/agent identity), or
+  state plainly in §1 that commits are under your name but the code was
+  AI-generated. Don't let an all-human commit log stand for AI-written code.
+- Priority: SOON.
+
 ---
 
 ## H. Builder capability (disclosure, not scan)

@@ -50,6 +50,11 @@ stand behind it.*
 **AI involvement:**
 - How much of this was built with AI assistance? (Roughly: a little / a lot /
   almost entirely.)
+- **Is the AI's authorship visible in your git history or contributors** (a
+  `Co-Authored-By` trailer, a bot/agent author), or are all commits under your
+  name only? Either is fine to disclose, but an all-human-looking commit log on
+  AI-written code is exactly the quiet gap this statement exists to close. See
+  BEST-PRACTICES G5 for the scan.
 
 **Builder capability (the behavioral version - what you can do, not your résumé):**
 - Could you debug a production issue in this codebase yourself, or would you need

@@ -70,6 +70,7 @@ already present.
 - Dependency manifest vs lockfile (`package.json` ↔ lockfile; `requirements.txt` ↔ pinned).
 - Third-party services data flows through: `rg -n -e 'supabase' -e 'firebase' -e 'stripe' -e 'plausible' -e 'posthog' -e 'sendgrid' -e 'resend'` (and AI providers only if the app actually has an AI feature)
 - Permissive rules: `rg -n -e 'allow read, write: if true' -e 'Access-Control-Allow-Origin.{0,5}\*'`
+- AI authorship in the commit record (BEST-PRACTICES G5): `git log --all --format='%an <%ae>%n%(trailers:key=Co-authored-by)' | rg -i 'claude|anthropic|copilot|cursor|openai|gpt|devin|aider|codeium|\[bot\]'` - if the build was largely AI-assisted but nothing credits an AI, flag the gap (credit it or disclose it in §1)
 
 **Pass 2 - Part C best-practice state.** Walk `BEST-PRACTICES.md` (A-G) and run
 its detection commands to mark each practice good / partial / not-detected, with

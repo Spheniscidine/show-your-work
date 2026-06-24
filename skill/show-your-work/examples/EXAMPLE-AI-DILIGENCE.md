@@ -32,6 +32,9 @@ promises about AI, not facts anyone verified, but a broken promise is on me.
 ## 1. AI involvement & builder capability
 - **How much AI assistance:** Almost entirely. I described the features and an AI
   agent wrote nearly all of the code.
+- **Is the AI credited in my commit history?** No. All commits are under my name;
+  the agent that wrote most of the code isn't credited in git, so I'm disclosing it
+  here. I've started adding Co-Authored-By trailers going forward.
 - **Could I debug / maintain this solo?** Partly. I can read the code and fix the
   main screens (tasks, boards, login) with some effort. The database setup and a
   couple of the libraries are still over my head.
