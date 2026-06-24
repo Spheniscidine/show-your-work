@@ -1,0 +1,5 @@
+# Show Your Work is just markdown — keep the repo clean of local cruft.
+.DS_Store
+.env
+.env.*
+node_modules/
